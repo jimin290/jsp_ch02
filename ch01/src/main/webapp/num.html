@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		if(!frm.num1.value) {
+			alert("첫 번째 숫자를 입력해주세요!");
+			frm.num1.focus();
+			return false;
+			
+		} 
+		
+		if (isNaN(frm.num1.value)) {
+			alert("숫자1 외에 다른 것은 입력 금지!");
+			frm.num1.focus();
+			frm.num1.value = ""; // 입력된 글자 지우기
+			return false;
+		}
+		
+		if(!frm.num2.value) {
+			alert("두 번째 숫자를 입력해주세요!");
+			frm.num2.focus();
+			return false;
+			
+			
+		}
+		if (isNaN(frm.num2.value)) {
+			alert("숫자2 외에 다른 것은 입력 금지!");
+			frm.num2.focus();
+			frm.num2.value = ""; // 입력된 글자 지우기
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+	<h1>연산할 두 숫자를 입력하세요</h1>
+	<form action="Num" name="frm" onsubmit="return chk()">
+		첫 번째 숫자 : <input type="text" name="num1"><p>
+		두 번째 숫자 : <input type="text" name="num2"><p>
+		<input type="submit" value="확인">
+		
+	</form>
+</body>
+</html>
