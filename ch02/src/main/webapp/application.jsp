@@ -13,7 +13,7 @@
 	int minor = application.getMinorVersion();
 	String path = application.getRealPath("/"); // *** 중요!!
 %>
-	<h2>Application 내장 객체 예제</h2>
+	<h2>Application 내장 객체 예제 수정본</h2>
 	웹 컨테이너의 이름과 버전 :
 	<%=info %><p>
 	서블릿의 버전 : <%=major %>.<%=minor %> <p>
